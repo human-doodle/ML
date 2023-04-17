@@ -6,12 +6,34 @@ Google Colab notebooks have an idle timeout of 90 minutes and absolute timeout o
 GOTO Inspect element console and type in the following code:
 
 ```
-function ClickConnect(){
-console.log("Working"); 
-document.querySelector("colab-toolbar-button").click() 
-}setInterval(ClickConnect,60000)
+var startClickConnect = function startClickConnect(){
+    var clickConnect = function clickConnect(){
+        console.log("Connnect Clicked - Start");
+        document.querySelector("colab-toolbar-button").click() 
+        console.log("Connnect Clicked - End"); 
+    };
+
+    var intervalId = setInterval(clickConnect, 60000);
+
+    var stopClickConnectHandler = function stopClickConnect() {
+        console.log("Connnect Clicked Stopped - Start");
+        clearInterval(intervalId);
+        console.log("Connnect Clicked Stopped - End");
+    };
+
+    return stopClickConnectHandler;
+};
+
+var stopClickConnect = startClickConnect();
 ```
 
-Source: https://medium.com/@shivamrawat_756/how-to-prevent-google-colab-from-disconnecting-717b88a128c0
+To stop the execution :
 
-For some other solutions, ref: https://stackoverflow.com/questions/57113226/how-can-i-prevent-google-colab-from-disconnecting
+```
+stopClickConnect();
+```
+
+Source:  https://stackoverflow.com/questions/57113226/how-can-i-prevent-google-colab-from-disconnecting
+
+For some other solutions, ref: https://medium.com/@shivamrawat_756/how-to-prevent-google-colab-from-disconnecting-717b88a128c0
+
