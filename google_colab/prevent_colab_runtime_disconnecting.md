@@ -33,6 +33,9 @@ To stop the execution :
 stopClickConnect();
 ```
 
+
+This keeps on adding a new cell every execution, but I'm ok with this solution as of now.
+
 Source:  https://stackoverflow.com/questions/57113226/how-can-i-prevent-google-colab-from-disconnecting
 
 For some other solutions, ref: https://medium.com/@shivamrawat_756/how-to-prevent-google-colab-from-disconnecting-717b88a128c0
