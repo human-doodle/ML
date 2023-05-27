@@ -17,6 +17,15 @@
 
 - [Common Git Commands](git/git_commands.md)
 
+### Python 
+
+- [Dictionary](python/dictionaries.md)
+
+### SQL 
+
+- [Aggregate function - AVG](sql/avg.md)
+
+
 
 Inspiration: 
 
