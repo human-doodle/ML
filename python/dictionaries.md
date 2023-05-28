@@ -6,6 +6,7 @@ cars = {
 }
 ```
 Dictionaries are mutable, so entries can be added, removed, and changed. They are ordered.
+Fun Fact: Dictionary keys should be im-mutable. So a tuple can be a key but a list can not.
 
 Built-in methods for dictionary:
 1. fromkeys(key_tuple, value) : Returns a dictionary with the specified keys and value
