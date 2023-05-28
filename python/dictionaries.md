@@ -1,9 +1,11 @@
+```
 cars = {
   "brand": "Ford",
   "model": "Mustang",
   "year": 1964
 }
-Dictioanries are mutable, so entries can be added, removed, and changed. They are ordered.
+```
+Dictionaries are mutable, so entries can be added, removed, and changed. They are ordered.
 
 Built-in methods for dictionary:
 1. fromkeys(key_tuple, value) : Returns a dictionary with the specified keys and value
