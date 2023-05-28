@@ -66,6 +66,34 @@ Output: `dict_keys(['brand', 'model', 'year'])`
 
 Ref: https://www.w3schools.com/python/python_ref_dictionary.asp
 
+## Default Dictionary:
+Sometimes, in case of dictionary, when the KeyError is raised, it might become a problem.
+To overcome this Python introduces another dictionary like container known as Defaultdict which is present inside the collections module.
+Defaultdict is a container like dictionaries present in the module collections. 
+Defaultdict is a sub-class of the dictionary class that returns a dictionary-like object. The functionality of both dictionaries and defaultdict are almost same except for the fact that defaultdict never raises a KeyError. 
+It provides a default value for the key that does not exists.
+
+Syntax: 
+
+`defaultdict(default_factory)`
+
+Parameters:  
+default_factory: A function returning the default value for the dictionary defined. If this argument is absent then the dictionary raises a KeyError.
+
+So for example, when the list class is passed as the default_factory argument, then a defaultdict is created with the values that are list.
+```
+d = defaultdict(list)
+  
+for i in range(5):
+    d[i].append(i)
+print(d)
+
+```
+Output:
+`defaultdict(<class 'list'>, {0: [0], 1: [1], 2: [2], 3: [3], 4: [4]})`
+
+ref: https://www.geeksforgeeks.org/defaultdict-in-python/
+
 Some Observations: 
 
 1.
