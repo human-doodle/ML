@@ -26,6 +26,9 @@
 - [Aggregate function - AVG](sql/avg.md)
 - [MS SQL Server Useful Functions](sql/MsSqlServer_functions.md)
 
+### Machine Learning 
+
+- [Computer Vision](ML/Computer_Vision.md)
 
 
 Inspiration: 
