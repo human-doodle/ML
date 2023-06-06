@@ -24,6 +24,7 @@
 ### SQL 
 
 - [Aggregate function - AVG](sql/avg.md)
+- [MS SQL Server Useful Functions](sql/MsSqlServer_functions.md)
 
 
 
