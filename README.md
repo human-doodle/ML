@@ -25,6 +25,7 @@
 
 - [Aggregate function - AVG](sql/avg.md)
 - [MS SQL Server Useful Functions](sql/MsSqlServer_functions.md)
+- [Window Functions](sql/Window_functions.md)
 
 ### Machine Learning 
 
