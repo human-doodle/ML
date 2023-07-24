@@ -1,4 +1,4 @@
-# CAST() function in SQL and its usage in various scenarios:
+## 1. CAST() function in SQL and its usage in various scenarios:
 
 Data Type Conversion: The primary purpose of the CAST() function is to convert data from one data type to another. It can be used to convert numeric types, string types, date and time types, etc.
 Example: Convert a string representation of a number to an actual numeric data type.
@@ -65,4 +65,59 @@ Result:
 null_value | default_value
 --------------------------
 (null)     | 0
+```
+
+
+## 2. FILTER (PostgreSQL)
+  FILTER() function is a non-standard feature found in some database systems like PostgreSQL. It is an extension to aggregate functions introduced to enable more complex filtering of data within an aggregate function.
+
+In PostgreSQL, the FILTER() function allows us to specify a condition to filter the rows included in an aggregate function's calculation. This is particularly useful when you want to perform an aggregate function only on a subset of rows that meet specific conditions.
+```
+aggregate_function(expression) FILTER (WHERE condition)
+```
+Example: Calculate the sum of order amounts for customer_id 101 using the FILTER() function in PostgreSQL.
+
+```
+SELECT
+    customer_id,
+    SUM(order_amount) FILTER (WHERE customer_id = 101) AS total_amount_for_customer_101
+FROM orders
+GROUP BY customer_id;
+```
+Result:
+
+```
+customer_id | total_amount_for_customer_101
+-------------------------------------------
+101         | 220.00
+102         | 171.25
+103         | 50.25
+```
+
+In T-SQL, we can achieve similar functionality using conditional aggregation or subqueries to filter data before performing aggregate functions.
+
+1. Conditional Aggregation: With conditional aggregation, you can use the CASE statement within aggregate functions to specify conditions for including or excluding rows in the aggregation.
+Example: Calculate the sum of order amounts for customer_id 101 using conditional aggregation in T-SQL.
+
+```
+SELECT
+    customer_id,
+    SUM(CASE WHEN customer_id = 101 THEN order_amount ELSE 0 END) AS total_amount_for_customer_101
+FROM orders
+GROUP BY customer_id;
+```
+
+2. Subqueries: Another approach is to use subqueries to filter the data before performing the aggregate function.
+Example: Calculate the sum of order amounts for customer_id 101 using a subquery in T-SQL.
+
+```
+SELECT
+    customer_id,
+    SUM(order_amount) AS total_amount_for_customer_101
+FROM (
+    SELECT customer_id, order_amount
+    FROM orders
+    WHERE customer_id = 101
+) AS filtered_orders
+GROUP BY customer_id;
 ```
