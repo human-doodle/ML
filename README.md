@@ -26,6 +26,7 @@
 - [Aggregate function - AVG](sql/avg.md)
 - [MS SQL Server Useful Functions](sql/MsSqlServer_functions.md)
 - [Window Functions](sql/Window_functions.md)
+- [CASE statement](sql/case_when_then_else.md)
 
 ### Machine Learning 
 
