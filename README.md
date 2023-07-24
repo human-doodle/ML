@@ -27,6 +27,7 @@
 - [MS SQL Server Useful Functions](sql/MsSqlServer_functions.md)
 - [Window Functions](sql/Window_functions.md)
 - [CASE statement](sql/case_when_then_else.md)
+- [SQL Useful functions: cast()](sql/usefulSQL_Func.md)
 
 ### Machine Learning 
 
