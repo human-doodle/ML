@@ -143,3 +143,29 @@ unit: The unit or part that you want to extract, represented as a string. The va
 'microseconds' or 'microsecond' or 'microsec' or 'us'
 ```
 source: The date, timestamp, or interval value from which you want to extract the specified unit.
+
+Extract the year from a date:
+```
+SELECT DATE_PART('YEAR', '2023-07-23') AS year;
+```
+Result: '2023'
+
+Extract the month from a timestamp:
+```
+SELECT DATE_PART('MONTH', TIMESTAMP '2023-07-23 15:30:00') AS month;
+```
+Result: '7'
+
+Extract the day from an interval:
+```
+SELECT DATE_PART('DAY', INTERVAL '5 days 12 hours') AS days;
+```
+Result: '5'
+
+Extract the milliseconds from a timestamp:
+```
+SELECT DATE_PART('MILLISECOND', TIMESTAMP '2023-07-23 15:30:00.123456') AS milliseconds;
+```
+Result: '123'
+
+
