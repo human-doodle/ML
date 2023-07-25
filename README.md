@@ -23,6 +23,7 @@
 
 ### SQL 
 
+- [Important Concepts and Jargons](sql/Concepts.md)
 - [Aggregate function - AVG](sql/avg.md)
 - [MS SQL Server Useful Functions](sql/MsSqlServer_functions.md)
 - [Window Functions](sql/Window_functions.md)
