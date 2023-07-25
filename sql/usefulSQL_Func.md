@@ -121,3 +121,25 @@ FROM (
 ) AS filtered_orders
 GROUP BY customer_id;
 ```
+
+## DATE_PART (PosgreSQL)
+In PostgreSQL, the DATE_PART() function is used to extract specific components or parts (such as year, month, day, etc.) from a date, timestamp, or interval value. It is a powerful function that allows you to retrieve individual elements from a date or time value for further analysis or formatting.
+
+The basic syntax of the DATE_PART() function is as follows:
+```
+DATE_PART(unit, source)
+```
+
+
+unit: The unit or part that you want to extract, represented as a string. The valid units are:
+```
+'years' or 'year' or 'y'
+'months' or 'month' or 'mon'
+'days' or 'day' or 'd'
+'hours' or 'hour' or 'h'
+'minutes' or 'minute' or 'min'
+'seconds' or 'second' or 'sec'
+'milliseconds' or 'millisecond' or 'millisec' or 'ms'
+'microseconds' or 'microsecond' or 'microsec' or 'us'
+```
+source: The date, timestamp, or interval value from which you want to extract the specified unit.
