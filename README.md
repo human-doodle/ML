@@ -33,7 +33,7 @@
 ### Machine Learning 
 
 - [Computer Vision](ML/Computer_Vision.md)
-- [LSTM](ML.LSTM.md)
+- [LSTM](ML/LSTM.md)
 
 
 ### Algorithms
